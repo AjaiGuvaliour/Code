@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<table>
+  <thead>
+     <th><input type="text" [(ngModel)]="empid" (input)="search()"></th>
+     <th><input type="text" [(ngModel)]="empname" (input)="searchData()"></th>
+     <th>
+         <select name="Status" (input)="searchData()">
+             <option value="Active">Active</option>
+             <option value="InActive">InActive</option>
+         </select>
+     </th>
+ </thead>
+     <tbody *ngFor="let data of simp">
+         <tr>
+             <td>{{data.empid}}</td>
+             <td>{{data.empname}}</td>
+             <td>{{data.phonenum}}</td>
+         </tr>
+     </tbody>
+ </table>
